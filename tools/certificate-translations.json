@@ -1,0 +1,206 @@
+[
+  {
+    "slug": "big-data-python-intro",
+    "title": "Workshop: Introduction to Big Data Processing in Python",
+    "document_type": "Certificate of completion",
+    "statement": "This certifies that Aleksander Kalacun completed the training \"Workshop: Introduction to Big Data Processing in Python\".",
+    "facts": [
+      [
+        "Training date",
+        "31 March 2025"
+      ],
+      [
+        "Training duration",
+        "4 hours"
+      ],
+      [
+        "Certificate number",
+        "202503-195"
+      ],
+      [
+        "Certificate issue date",
+        "9 September; no year is printed in the original."
+      ]
+    ],
+    "outcomes": [
+      "Understanding big data processing procedures.",
+      "Using basic pandas functions to process big data.",
+      "Using advanced pandas functions to work with big data.",
+      "Optimizing the loading and storage of big data.",
+      "Visualizing and analyzing big data."
+    ],
+    "signatories": [
+      "Marko Drobnjak, Chair of the EuroCC SLING Consortium Management Board.",
+      "Jani Dugonik, Institute of Informatics, Faculty of Electrical Engineering and Computer Science, University of Maribor."
+    ],
+    "funding": "The EuroCC 2 project is funded by the European Union. It is funded by the European High Performance Computing Joint Undertaking (EuroHPC JU) and Germany, Bulgaria, Austria, Croatia, Cyprus, the Czech Republic, Denmark, Estonia, Finland, Greece, Hungary, Ireland, Italy, Lithuania, Latvia, Poland, Portugal, Romania, Slovenia, Spain, Sweden, France, the Netherlands, Belgium, Luxembourg, Slovakia, Norway, Turkey, the Republic of North Macedonia, Iceland, Montenegro, and Serbia under Grant Agreement No. 101101903."
+  },
+  {
+    "slug": "big-data-python-advanced",
+    "title": "Workshop: Advanced Big Data Processing in Python",
+    "document_type": "Certificate of completion",
+    "statement": "This certifies that Aleksander Kalacun completed the training \"Workshop: Advanced Big Data Processing in Python\".",
+    "facts": [
+      [
+        "Training date",
+        "2 April 2025"
+      ],
+      [
+        "Training duration",
+        "4 hours"
+      ],
+      [
+        "Certificate number",
+        "202504-07"
+      ],
+      [
+        "Certificate issue date",
+        "9 September; no year is printed in the original."
+      ]
+    ],
+    "outcomes": [
+      "Using basic functions in pandas, Polars, and cuDF to process big data.",
+      "Using advanced functions in pandas, Polars, and cuDF to work with big data.",
+      "Optimizing the loading and storage of big data.",
+      "Comparing file formats for big data sets.",
+      "Processing big data on a graphics processing unit."
+    ],
+    "signatories": [
+      "Marko Drobnjak, Chair of the EuroCC SLING Consortium Management Board.",
+      "Jani Dugonik, Institute of Informatics, Faculty of Electrical Engineering and Computer Science, University of Maribor."
+    ],
+    "funding": "The EuroCC 2 project is funded by the European Union. It is funded by the European High Performance Computing Joint Undertaking (EuroHPC JU) and Germany, Bulgaria, Austria, Croatia, Cyprus, the Czech Republic, Denmark, Estonia, Finland, Greece, Hungary, Ireland, Italy, Lithuania, Latvia, Poland, Portugal, Romania, Slovenia, Spain, Sweden, France, the Netherlands, Belgium, Luxembourg, Slovakia, Norway, Turkey, the Republic of North Macedonia, Iceland, Montenegro, and Serbia under Grant Agreement No. 101101903."
+  },
+  {
+    "slug": "cuda-cpp",
+    "title": "NVIDIA Workshop: Fundamentals of Accelerated Computing with Modern CUDA C++",
+    "document_type": "Certificate of completion",
+    "statement": "This certifies that Aleksander Kalacun completed the training \"NVIDIA Workshop: Fundamentals of Accelerated Computing with Modern CUDA C++\".",
+    "facts": [
+      [
+        "Training date",
+        "19 June 2025"
+      ],
+      [
+        "Training duration",
+        "8 hours"
+      ],
+      [
+        "Certificate number",
+        "202506-38"
+      ],
+      [
+        "Certificate issue date",
+        "9 September; no year is printed in the original."
+      ]
+    ],
+    "outcomes": [
+      "Understanding the fundamental concepts of parallel computing and GPU acceleration.",
+      "Writing and compiling C++ code that runs directly on GPUs using CUDA.",
+      "Optimizing memory usage and data transfers between CPUs and GPUs.",
+      "Using high-performance CUDA parallel algorithms to simplify application development.",
+      "Implementing custom parallel data-processing algorithms with CUDA kernels.",
+      "Using CUDA streams to overlap computation and data transfers.",
+      "Profiling and optimizing CUDA applications with NVIDIA Nsight Systems.",
+      "Identifying opportunities to accelerate existing CPU code with CUDA."
+    ],
+    "signatories": [
+      "Marko Drobnjak, Chair of the EuroCC SLING Consortium Management Board.",
+      "Jani Dugonik, Institute of Informatics, Faculty of Electrical Engineering and Computer Science, University of Maribor."
+    ],
+    "funding": "The EuroCC 2 project is funded by the European Union. It is funded by the European High Performance Computing Joint Undertaking (EuroHPC JU) and Germany, Bulgaria, Austria, Croatia, Cyprus, the Czech Republic, Denmark, Estonia, Finland, Greece, Hungary, Ireland, Italy, Lithuania, Latvia, Poland, Portugal, Romania, Slovenia, Spain, Sweden, France, the Netherlands, Belgium, Luxembourg, Slovakia, Norway, Turkey, the Republic of North Macedonia, Iceland, Montenegro, and Serbia under Grant Agreement No. 101101903."
+  },
+  {
+    "slug": "containers-hpc",
+    "title": "Workshop: Containers on Supercomputers",
+    "document_type": "Certificate of completion",
+    "statement": "This certifies that Aleksander Kalacun completed the training \"Workshop: Containers on Supercomputers\".",
+    "facts": [
+      [
+        "Training date",
+        "24 June 2025"
+      ],
+      [
+        "Training duration",
+        "5 hours"
+      ],
+      [
+        "Certificate number",
+        "202506-45"
+      ],
+      [
+        "Certificate issue date",
+        "9 September; no year is printed in the original."
+      ]
+    ],
+    "outcomes": [
+      "Understanding the Slurm workload manager.",
+      "Understanding environment modules and containers.",
+      "Using existing Docker and Apptainer containers.",
+      "Building custom Apptainer containers to run selected programs on a supercomputing cluster.",
+      "Using different computing resources in environment modules and containers, including CPU cores, graphics accelerators, and nodes."
+    ],
+    "signatories": [
+      "Marko Drobnjak, Chair of the EuroCC SLING Consortium Management Board.",
+      "Davor Sluga, Assistant at the Faculty of Computer and Information Science, University of Ljubljana."
+    ],
+    "funding": "The EuroCC 2 project is funded by the European Union. It is funded by the European High Performance Computing Joint Undertaking (EuroHPC JU) and Germany, Bulgaria, Austria, Croatia, Cyprus, the Czech Republic, Denmark, Estonia, Finland, Greece, Hungary, Ireland, Italy, Lithuania, Latvia, Poland, Portugal, Romania, Slovenia, Spain, Sweden, France, the Netherlands, Belgium, Luxembourg, Slovakia, Norway, Turkey, the Republic of North Macedonia, Iceland, Montenegro, and Serbia under Grant Agreement No. 101101903."
+  },
+  {
+    "slug": "hackathon-2025",
+    "title": "HackathON 2025",
+    "document_type": "Certificate of participation",
+    "statement": "The certificate of participation is awarded to Aleksander Kalacun.",
+    "facts": [
+      [
+        "Event tagline",
+        "Fly into the future with open science and supercomputing."
+      ],
+      [
+        "Year",
+        "2025"
+      ]
+    ],
+    "signatories": [
+      "Director of Arnes; signature appears on the original."
+    ],
+    "notes": [
+      "This is a translation of the participation certificate. The original does not state a competition placing."
+    ]
+  },
+  {
+    "slug": "gamejam-first-place",
+    "title": "GAME JAM - First Place",
+    "document_type": "Award certificate",
+    "statement": "First place for the best-developed game at the GAME JAM event.",
+    "facts": [],
+    "notes": [
+      "The original does not print a recipient name or date.",
+      "Organizations shown on the original: BEST Maribor, ŠOUM (Student Organization of the University of Maribor), ACM, the IEEE University of Maribor Student Branch, and the Faculty of Electrical Engineering and Computer Science."
+    ]
+  },
+  {
+    "slug": "quantum-programming",
+    "title": "Introduction to Quantum Programming",
+    "document_type": "Certificate of completion of a short educational course",
+    "statement": "Aleksander Kalacun fulfilled all requirements of the short educational course \"Introduction to Quantum Programming\" on 5 February 2025. Learning outcomes were assessed and graded, with a final grade of 10. The course had a total workload of 1 ECTS.",
+    "facts": [
+      [
+        "Issuing institution",
+        "University of Maribor, Faculty of Electrical Engineering and Computer Science (FERI UM), Republic of Slovenia"
+      ],
+      [
+        "Place and issue date",
+        "Maribor, 5 February 2025"
+      ],
+      [
+        "Certificate number",
+        "gttCGSB1G1sbZlSj7btTh-NKIPO-FERI-NKIPO-UKP-05022025-1"
+      ]
+    ],
+    "signatories": [
+      "Prof. Dr. Gorazd Štumberger, Dean of FERI UM; signature and stamp appear on the original."
+    ],
+    "funding": "This pilot microcredential is issued within the Recovery and Resilience Plan project (NOO). The project is co-financed by the Republic of Slovenia, the Ministry of Higher Education, Science and Innovation, and the European Union - NextGenerationEU. It is implemented under the Plan within the development area Smart, Sustainable and Inclusive Growth; the component Strengthening Competences, Especially Digital Competences and Those Required by New Professions and the Green Transition (C3 K5); and investment measure F: implementation of pilot projects whose results will inform the reform of higher education for a green and resilient transition to Society 5.0. Project: Pilot Projects for the Renewal of Higher Education for a Green and Resilient Transition."
+  }
+]

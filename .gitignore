@@ -1,0 +1,10 @@
+_site/
+__pycache__/
+.DS_Store
+.venv/
+*.pyc
+
+# Local input files; publish the selected documents under assets/ instead.
+/Kalacun-cv.pdf
+/certificates/
+/cv/

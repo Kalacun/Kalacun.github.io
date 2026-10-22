@@ -1,0 +1,103 @@
+{
+  "originals": [
+    {
+      "source": "certificates/2025-03-31_Delavnica_Uvod_AKalacun.pdf",
+      "public": "assets/documents/certificates/big-data-python-intro.pdf",
+      "english_in_original": false,
+      "sha256": "1fa2b4900665e14d71ea9d07d01bbec770402f5141cae5464f08a8a8af824dae"
+    },
+    {
+      "source": "certificates/2025-04-02_Delavnica_Napredna_AKalacun.pdf",
+      "public": "assets/documents/certificates/big-data-python-advanced.pdf",
+      "english_in_original": false,
+      "sha256": "d61aec26938505f1940e6199db4b821138ebfc00841fb7bc6f306c85ed69d0a5"
+    },
+    {
+      "source": "certificates/CUDA.pdf",
+      "public": "assets/documents/certificates/cuda-cpp.pdf",
+      "english_in_original": false,
+      "sha256": "bef5f82a2b71f7b8c5ddfb14c50f88725787baa0e4f24ff86afbec8f1434b136"
+    },
+    {
+      "source": "certificates/Certificate of Attendance-strony-5.pdf",
+      "public": "assets/documents/certificates/multi-gpu-bootcamp.pdf",
+      "english_in_original": true,
+      "sha256": "1fc867490110272ee601e6c714229a111d3d4ac3330e3b5ed73e5ae83eec0b40"
+    },
+    {
+      "source": "certificates/Deep_Learning_NVidia.pdf",
+      "public": "assets/documents/certificates/nvidia-deep-learning.pdf",
+      "english_in_original": true,
+      "sha256": "749acdb61c4c5d236f6155c41b1e2e8d4707d6fe9b8815f7e7a77c043bfb7937"
+    },
+    {
+      "source": "certificates/GSS_2025_Certificates_Aleksander Kalacun.pdf",
+      "public": "assets/documents/certificates/gray-scott-school-2025.pdf",
+      "english_in_original": true,
+      "sha256": "e5ddba339ea0d325e42b8a4631491ce3f37e766ece2912753fce71b8c897c1fa"
+    },
+    {
+      "source": "certificates/Potrdilo_HackathON 2025_AKalacun.pdf",
+      "public": "assets/documents/certificates/hackathon-2025.pdf",
+      "english_in_original": false,
+      "sha256": "2e0c8fcde88069b2b2b4ddf485646e58d4a7f53a4de908183384498e8be77c8a"
+    },
+    {
+      "source": "certificates/certificate-AIprofiling-2025-07.pdf",
+      "public": "assets/documents/certificates/ai-profiling-bootcamp.pdf",
+      "english_in_original": true,
+      "sha256": "9c8126c210be862f08a5148b75d5f6b6044c89dd95a707c34bfd0ca164be7275"
+    },
+    {
+      "source": "certificates/gamejam.pdf",
+      "public": "assets/documents/certificates/gamejam-first-place.pdf",
+      "english_in_original": false,
+      "sha256": "025476a24aff1f6fd9d2db74da5093a64c4e09d29a99f38240c8b8d21b061823"
+    },
+    {
+      "source": "certificates/kvantno_programiranje.pdf",
+      "public": "assets/documents/certificates/quantum-programming.pdf",
+      "english_in_original": false,
+      "sha256": "a2d660749cc65af6baf0005c5363e6744f732941001d39dc32fccabc95a7d572"
+    },
+    {
+      "source": "certificates/nemščina_potrdilo.pdf",
+      "public": "assets/documents/certificates/german-b1-b2.pdf",
+      "english_in_original": true,
+      "sha256": "2f1f582f0aaeffeb72edd9ba8bd2d346944b836cade4964a2ec8e88b7b198d51"
+    },
+    {
+      "source": "certificates/vsebniki.pdf",
+      "public": "assets/documents/certificates/containers-hpc.pdf",
+      "english_in_original": false,
+      "sha256": "65fc44754ffe395bfc0062554459be00f94ace3d20dc43ce8780f94c1bb2641b"
+    },
+    {
+      "source": "certificates/IELTS.pdf",
+      "public": "assets/documents/certificates/ielts.pdf",
+      "english_in_original": true,
+      "sha256": "6832a6f0d75becd05477e7f941fa846078791adef666d1d6d0cfdf100723cbe9"
+    },
+    {
+      "source": "assets/documents/certificates/deans_award_2025.pdf",
+      "public": "assets/documents/certificates/deans_award_2025.pdf",
+      "english_in_original": false,
+      "sha256": "9a2e00507c9da091f844a8532db909a4872b50885ef136029836b5a6e890df63",
+      "translation": "assets/documents/certificates/translations/deans-award-2025-en.pdf"
+    },
+    {
+      "source": "assets/documents/certificates/top_5%.pdf",
+      "public": "assets/documents/certificates/top_5%.pdf",
+      "english_in_original": false,
+      "sha256": "3985020a6b1d8a87634d20945df92f94c2d2e6ded8f45841e06bf06bd0c351bb",
+      "translation": "assets/documents/certificates/translations/top-5-percent-2026-en.pdf"
+    },
+    {
+      "source": "assets/documents/certificates/DinBus.pdf",
+      "public": "assets/documents/certificates/DinBus.pdf",
+      "english_in_original": false,
+      "sha256": "cdbb3a1e59811cf8e1117e3b6d5cdc38708aa6db3ead70cadd7da81cb9ac60c5",
+      "translation": "assets/documents/research/DinBus-en.pdf"
+    }
+  ]
+}

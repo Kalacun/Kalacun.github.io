@@ -1,0 +1,139 @@
+[
+  {
+    "original": "assets/documents/certificates/deans_award_2025.pdf",
+    "output": "assets/documents/certificates/translations/deans-award-2025-en.pdf",
+    "title": "Dean's Award",
+    "subtitle": "Faculty of Electrical Engineering and Computer Science, University of Maribor",
+    "blocks": [
+      {
+        "heading": "Recipient",
+        "text": "The Dean's Award is presented to the student Aleksander Kalacun."
+      },
+      {
+        "heading": "Award statement",
+        "text": "With this award, I confirm that the student ranks at the very top of the first year of the academic study program Computer Science and Information Technologies. In the 2024/2025 academic year, he achieved an average grade of 9.70 in the first year of the first-cycle Computer Science and Information Technologies program. This places him among the top 5% of students in his cohort.\n\nI sincerely congratulate the student on this outstanding achievement, which is the result of diligent work and demonstrated dedication, and present him with the Dean's Award."
+      },
+      {
+        "heading": "Place and date",
+        "text": "Maribor, 20 November 2025."
+      },
+      {
+        "heading": "Signatory",
+        "text": "Full Professor Dr. Gorazd Štumberger, university-qualified electrical engineer. The signature appears on the original."
+      }
+    ]
+  },
+  {
+    "original": "assets/documents/certificates/top_5%.pdf",
+    "output": "assets/documents/certificates/translations/top-5-percent-2026-en.pdf",
+    "title": "Certificate of Ranking Among the Top 5% of Students in the Cohort",
+    "subtitle": "2025/2026 academic year",
+    "blocks": [
+      {
+        "heading": "Form heading and issuing institution",
+        "text": "Public Scholarship, Development, Disability and Maintenance Fund of the Republic of Slovenia.\n\nEducational institution issuing the certificate (full name and registered address): University of Maribor - FERI, Koroška cesta 46, 2000 Maribor.\n\nPrinted instruction: The certificate must be issued after the end of the 2025/2026 academic year."
+      },
+      {
+        "heading": "Student and study program",
+        "text": "Surname and first name: Kalacun Aleksander.\nYear of the study program in the 2025/2026 academic year: 2.\nStudy program: first-cycle academic study program Computer Science and Information Technologies."
+      },
+      {
+        "heading": "Certification and grades",
+        "text": "Based on the grades obtained in the 2025/2026 academic year, the student named above ranks among the top 5% of students in the cohort.\n\nStudent's average grade in the 2025/2026 academic year: 10.00.\nAverage grade of all students in the same year of the same study program for the 2025/2026 academic year: 8.09."
+      },
+      {
+        "heading": "Definitions and calculation rules",
+        "text": "The cohort includes all students enrolled in the same year of the same study program as the student for whom the institution issues this certificate, whether enrolled full-time, part-time, as repeat students, or otherwise.\n\nThe average grade of the student or cohort takes into account all numerically expressed final grades, excluding the thesis, obtained between 1 October 2025 and 30 September 2026, regardless of the year of study to which the completed requirements belong. For students in dual-subject study programs, grades from both component study programs are included.\n\nFor students with fewer than three numerically expressed final grades in this period, all numerically expressed grades obtained in the last three academic years are taken into account.\n\nThe average grade is calculated to two decimal places."
+      },
+      {
+        "heading": "Place, date, and signatory",
+        "text": "Maribor, 13 October 2026.\nFull Professor Dr. Gorazd Štumberger, Dean. The signature and institutional stamp appear on the original."
+      }
+    ]
+  },
+  {
+    "original": "assets/documents/certificates/DinBus.pdf",
+    "output": "assets/documents/research/DinBus-en.pdf",
+    "title": "DinBus: Dynamic Bus Route Planning",
+    "subtitle": "Project proposal - Team Doner Kezz",
+    "blocks": [
+      {
+        "heading": "Authors and affiliations",
+        "text": "Aleksander Kalacun - FERI, University of Maribor.\nVal Sajko - FRI and FMF, University of Ljubljana.\nMatevž Petek - FERI, University of Maribor."
+      },
+      {
+        "heading": "Introduction",
+        "text": "Public transport is a foundation of a decentralized society that includes rural areas on equal terms. Its role is also reflected in its wider social benefits:"
+      },
+      {
+        "bullets": [
+          "Public transport is more environmentally friendly: 120-180 g CO2/km for a private car, compared with 30-80 g CO2/km per passenger on a bus, representing three to five times lower emissions [3].",
+          "It is safer, with approximately 90% less risk of a fatal accident: 2-3 fatalities per billion kilometers in a car, compared with 0.2-0.5 fatalities per billion kilometers in a bus [2].",
+          "It is up to four times cheaper: EUR 0.30-0.50 per kilometer in a car, compared with EUR 0.08-0.20 per person per kilometer on a bus [1]."
+        ]
+      },
+      {
+        "text": "Nevertheless, only 7-9% of the EU population uses public intercity bus transport daily, compared with 80-83% using cars [4]. The main reasons are excessively long journeys, unreliable arrivals, and infrequent, inconvenient timetables. In many cases, these options are unsuitable, so people choose a car that they can use whenever they need it. Better organization could substantially reduce waiting times and journey durations while making the system more predictable and robust.\n\nWe observe that an average intercity bus route includes many stops where no passengers board or alight. Some stops lie away from the main route, so visiting them wastes time and energy. Fixed routes change only every few years and still include unused stops. Adjusting routes daily could meet passenger needs more quickly and efficiently."
+      },
+      {
+        "heading": "Proposed solution",
+        "text": "Our solution introduces a new approach to intercity route planning by adapting routes on a daily basis. We use artificial intelligence optimization algorithms for this purpose. Importantly, the solution does not change the existing transport infrastructure. It relies on advance journey reservations, encouraged by cheaper and faster travel. Reservations would be made through a mobile application of the kind already offered and widely used by operators such as Marprom, Nomago, and LPP. Users simply select their boarding stop, destination stop, and approximate preferred boarding time. We aim to match that time as closely as possible.\n\nWe are considering two possible approaches to dynamic route planning.\n\nThe first approach retains fixed core routes and optimizes them in response to advance reservations. A bus keeps its main direction of travel but skips unused intermediate stops or makes minor adjustments where these shorten the route and travel time. This offers greater predictability for passengers, easier integration into the existing public transport system, and simpler timetable organization. However, retaining the existing route structure often prevents us from achieving the optimum possible without those constraints.\n\nThe second approach creates entirely new routes dynamically. For each set of reservations, we find an optimal route without tying it to fixed services. This offers maximum flexibility, better vehicle utilization, and potentially shorter and faster connections. However, it is considerably harder to implement, less predictable for users, and more difficult to integrate with the existing transport infrastructure.\n\nIn practice, the first approach is therefore a more realistic and robust option for initial deployment. The second can serve as a more advanced long-term vision or as a comparative optimization model in a simulation.\n\nExample: Suppose we want to travel between Trbovlje and Trebnje at 13:00. We reserve the trip in the application a few hours earlier, for example at 09:00. Because this connection has few passengers, the closest estimated departure is 12:40, with an expected journey time of one hour and forty minutes. The user is notified of the precise estimated departure time sufficiently early before departure."
+      },
+      {
+        "heading": "Methodology",
+        "text": "Implementation will proceed through the following steps:"
+      },
+      {
+        "numbered": [
+          "Obtain data on the locations of bus stops in Slovenia from the Register of Stations and Stops on the OPSI portal [5]. We will also design an experiment to measure stop usage and passenger flows. On a single day, we will count passengers boarding and alighting at several stops while taking care not to intrude on anyone's privacy.",
+          "Build a bus-traffic simulation. Using these data, we will construct a model of passenger movements at bus stops. We will use Python, which supports libraries such as NetworkX and NumPy for simulation logic and Pygame for visualization. The digital twin will be represented as a graph in which each stop is a node and each route is an edge.",
+          "Implement the differential evolution (DE) artificial intelligence algorithm in the simulation. We will use NiaPy, developed by the Institute of Informatics at FERI, University of Maribor.",
+          "Adapt and test the algorithm in large simulations that jointly plan routes for all stops in Slovenia. Because the computational demands of such a large number of stops are substantial, we will use a supercomputing cluster.",
+          "Publish our experimentally collected passenger data and simulation results openly on Zenodo. The resulting data set may also support other solutions.",
+          "Connect our internal solution to a web infrastructure and develop a simple application for journey reservations. The application will connect to a central server, where an artificial intelligence algorithm will use the submitted information to plan new bus routes. Users will receive detailed information in the application. We will use frameworks such as React and Express.",
+          "Publish the code for the complete solution on GitHub for public use and further development."
+        ]
+      },
+      {
+        "heading": "Expected results and possible difficulties",
+        "text": "We expect a fully functional algorithm that runs in simulation and plans routes correctly. Despite the limited time available, we will develop at least a simple application prototype and the web infrastructure needed to communicate with the traffic digital twin. However, we will not be able to deploy the application on a real bus network by the end of the hackathon, let alone extend it to the whole of Slovenia. We nevertheless believe that this implementation is a useful first step toward applying the concept more widely."
+      },
+      {
+        "heading": "UNESCO goals",
+        "text": "Our solution directly addresses the following two Sustainable Development Goals [6]."
+      },
+      {
+        "heading": "SDG 8: Decent Work and Economic Growth",
+        "text": "The solution supports SDG 8 by improving mobility efficiency, which is essential for economic development. Better public transport:"
+      },
+      {
+        "bullets": [
+          "Improves access to jobs, particularly in rural areas.",
+          "Reduces individuals' transport costs.",
+          "Improves productivity through shorter and more reliable journeys."
+        ]
+      },
+      {
+        "text": "Because bus transport is also up to four times cheaper than using a private car, the solution makes mobility more affordable and thereby supports economic growth."
+      },
+      {
+        "heading": "SDG 13: Climate Action",
+        "text": "Optimizing public transport:"
+      },
+      {
+        "bullets": [
+          "Increases bus usage.",
+          "Reduces greenhouse gas emissions.",
+          "Reduces energy inefficiency, such as traveling through unused stops."
+        ]
+      },
+      {
+        "text": "Because bus transport produces three to five times lower CO2 emissions per passenger than a private car, wider use of optimized public transport directly helps reduce the carbon footprint."
+      },
+      {
+        "heading": "References",
+        "text": "[1] European Automobile Manufacturers Association. The Automobile Industry Pocket Guide 2023-2024. Technical report. Brussels: ACEA, 2023. https://www.acea.auto\n\n[2] European Commission. Road Safety in the European Union - Trends, statistics and main challenges. Technical report. Brussels: European Commission, DG MOVE, 2023. https://transport.ec.europa.eu\n\n[3] European Environment Agency. Transport and Environment Report 2022: Decarbonising road transport. Technical report. Copenhagen: EEA, 2022. https://www.eea.europa.eu\n\n[4] Eurostat. Passenger transport statistics - modal split. Technical report. Luxembourg: Statistical Office of the European Union, 2023. https://ec.europa.eu/eurostat\n\n[5] Ministry of Infrastructure. Register of Stations and Stops. Accessed 20 March 2026. 2026. https://podatki.gov.si/dataset/register-postaj-in-postajalisc\n\n[6] United Nations. Transforming our world: The 2030 Agenda for Sustainable Development. 2015. https://undocs.org/A/RES/70/1"
+      }
+    ]
+  }
+]

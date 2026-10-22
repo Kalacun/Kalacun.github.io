@@ -1,0 +1,629 @@
+{
+  "draft": false,
+  "profile": {
+    "name": "Aleksander Kalacun",
+    "initials": "AK",
+    "role": "BSc student · Junior researcher",
+    "institution": "University of Maribor · Slovenia",
+    "location": "Maribor, Slovenia",
+    "bio": [
+      "I am a third-year BSc student in Computer Science and Information Technologies at the University of Maribor, where I also work as a junior researcher in the Intelligent Systems Laboratory, Institute of Informatics.",
+      "Previously, I worked as a student researcher and support engineer with the Vega supercomputer team at the Institute of Information Science (IZUM). My work focused on HPC research and industry collaboration."
+    ],
+    "interests": [
+      "Causal reinforcement learning",
+      "Geometric deep learning",
+      "Scientific computing",
+      "Computational intelligence"
+    ],
+    "availability": "",
+    "email": "aleksander@kalacun.com",
+    "cv": "assets/documents/cv/kalacun-cv.pdf",
+    "cv_label": "CV",
+    "cv_is_draft": false,
+    "github": "https://github.com/Kalacun",
+    "scholar": "https://scholar.google.com/citations?user=TUe8zA0AAAAJ",
+    "orcid": "https://orcid.org/0009-0006-2199-4405",
+    "photo": "assets/portrait.jpg",
+    "photo_alt": "Portrait of Aleksander Kalacun",
+    "updated": "2026-10-23",
+    "codeberg": "https://codeberg.org/kalacun",
+    "cv_source": "",
+    "show_glance": false,
+    "domain": "kalacun.com"
+  },
+  "research": [
+    {
+      "id": "self-rewriting-de",
+      "example": false,
+      "title": "Self-Rewriting Differential Evolution with Operator Synthesis",
+      "authors": "Iztok Fister Jr., Aleksander Kalacun, Iztok Fister",
+      "year": "2026",
+      "status": "published",
+      "venue": "ACM GECCO Companion 2026, pp. 389–392",
+      "summary": "A differential evolution method that evolves its mutation operators as short symbolic programs. Successful operators are written back into the algorithm’s source code and retained across restarts, allowing the search strategy itself to adapt. We evaluated the approach against standard differential evolution on five benchmark functions.",
+      "contribution": "",
+      "abstract": "Although evolving algorithms are based on principles of biological evolution, such as reproduction, mutation, and selection, they still obey the von Neumann principle \"Program = algorithm + data\". These algorithms remain rigid in the sense that their code does not change in computer memory during execution; their evolvability mainly concerns the data they process. In this paper, we introduce a novel variant of differential evolution that can adapt at the code level, overcoming this rigidity. In our proposed method, differential evolution mutation strategies are represented as short symbolic programs. Periodically, the system synthesizes new operators by mutating the top-performing operators through variable swaps, F-scaling, and the addition of difference terms. It merges these operators into a deduplicated library with a size cap and assigns credit based on empirical success using a softmax function. After each phase, the method rewrites its own program by serializing the evolved operator library and the best solution back into its source code and re-executing it, producing heritable, cumulative changes to the program itself. On canonical benchmarks, the optimizer discovers effective, previously absent operators and improves across phases, illustrating a practical path toward structural replication and self-adaptation.",
+      "evaluation": "",
+      "next": "",
+      "updated": "",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1145/3795101.3805457"
+        }
+      ],
+      "research_summary": ""
+    },
+    {
+      "id": "tropical-rl",
+      "example": false,
+      "title": "Parameter-Dependent Intervention Pruning in Causal Reinforcement Learning via Tropical Geometry",
+      "authors": "Aleksander Kalacun, Iztok Fister Jr., Iztok Fister",
+      "year": "2026",
+      "status": "in-progress",
+      "venue": "Planned submission to IEEE Transactions on Neural Networks and Learning Systems (TNNLS) in 2026",
+      "summary": "We investigate how tropical geometry can reduce the intervention choices considered by causal reinforcement learning agents. The method uses information about an environment’s parameters to prune suboptimal choices before a causal bandit policy selects an action.",
+      "contribution": "",
+      "abstract": "Causal reinforcement learning agents, such as structural causal bandit agents, must not only find a policy that maximizes reward in an uncertain environment but also decide where to intervene: which variables to act on and which to leave to their natural, possibly confounded mechanisms. Causal agents use a three-level hierarchy to interact with their environment: observational, interventional, and counterfactual. Established structural causal bandit methods, such as POMIS, reduce the complexity of searching the intervention set from O(3^k) to O(2^k), where k denotes the number of arms, by using the causal diagram to prune targets that are never optimal. However, the POMIS intervention set deliberately represents the worst case and ignores environment-specific parameter restrictions implied by the available data.\n\nThis paper addresses that gap by introducing a second, parameter-dependent intervention-pruning layer. The problem is transformed into a tropical geometry representation that incorporates the parameters into the optimal-arm decision. The proposed pipeline consists of five steps: (1) calculate the POMIS-reduced arm set from the causal graph G; (2) decompose the environment parameterization using c-factorization and identify a reward distribution; (3) tropicalize the reward distribution; (4) apply parameter-dependent tropical pruning to remove only provably suboptimal arms, certified using a linear program; and (5) choose an action using an online policy for structural causal bandits. In the pruning step, arms are represented by a tropical surrogate in which each monomial dominates the others in the observed tropical rational functions containing the reward distributions.\n\nThe proposed method is policy-agnostic and introduces two variants of structural causal bandit algorithms: the upper confidence bound method PDTP-UCB and the Thompson sampling method PDTP-TS. It applies to environments that satisfy the stated assumptions. We evaluated the approach on synthetic drug-combination benchmarks with k ∈ {3, 4, 6} arms. Across 100 independent runs with a time horizon of T = 10,000, PDTP-UCB reduced the UCB1-on-POMIS assignment-arm set from 12 arms to 2, from 36 to 4, and from 144 to 5, respectively. PDTP-UCB also reduced final cumulative regret relative to UCB1-on-POMIS by a factor of approximately 11 to 19. Replacing the online policy with Thompson sampling improved the results further.",
+      "evaluation": "",
+      "next": "",
+      "updated": "",
+      "links": [],
+      "research_summary": ""
+    },
+    {
+      "id": "marnn",
+      "example": false,
+      "title": "MARNN: A New Method for Multi-agent Reinforcement Learning",
+      "authors": "Aleksander Kalacun, Iztok Fister Jr.",
+      "year": "2025",
+      "status": "published",
+      "venue": "IEEE ERK 2025 · pp. 601–604",
+      "summary": "A GraphRNN-inspired method for coordinating agents in dynamic, partially observed graph environments. It combines recurrent memory, graph convolutional observation encoders, and attention-based communication. We evaluated it against IQL, QMIX, and VDN in custom package-delivery environments, which the study also introduces as benchmarks for multi-agent reinforcement learning.",
+      "contribution": "",
+      "abstract": "This paper presents a new method for dynamic, partially observed multi-agent Markov decision processes with stochastic elements. We use this formulation to define and simulate real-world problems and represent them as graphs. Existing multi-agent reinforcement learning algorithms struggle in changing environments that lack consistency. The core idea of the proposed algorithm is based on the deep autoregressive model GraphRNN, enabling long-term goal memorization and greater resilience to stochastic changes in the environment. Policy decisions are based on graph convolutional network encoders. Using observations and information communicated by other agents through graph attention network encoders, agents decide on the best next state. To demonstrate the method's capabilities, we implemented new graph-based environments. We used these environments to evaluate multi-agent reinforcement learning algorithms on problems resembling real-world situations, providing an effective benchmark.",
+      "evaluation": "",
+      "next": "",
+      "updated": "",
+      "links": [
+        {
+          "label": "Proceedings",
+          "url": "https://erk.fe.uni-lj.si/2025/papers/kalacun(marnn__a).pdf"
+        }
+      ],
+      "research_summary": ""
+    }
+  ],
+  "projects": [
+    {
+      "id": "syntherra",
+      "example": false,
+      "featured": true,
+      "title": "Syntherra",
+      "year": "2025",
+      "context": "Arnes Research Hackathon",
+      "tools": "",
+      "summary": "A molecular-generation prototype combining a pretrained model, graph neural networks, and reinforcement learning to search for candidate molecules under specified chemical conditions. Trained on HPC infrastructure, with results shared on Zenodo.",
+      "contribution": "Led an interdisciplinary team of informatics and medicine students and implemented the learning pipeline. Around 35 teams from universities across Slovenia applied; 28 advanced to the first round, and eight reached the final. Our team placed joint 4th–5th.",
+      "details": "",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Kalacun/Syntherra"
+        },
+        {
+          "label": "Research results",
+          "url": "https://zenodo.org/records/15205817"
+        }
+      ]
+    },
+    {
+      "id": "hpc-optimization",
+      "example": false,
+      "featured": true,
+      "title": "Simtune: HPC optimization tool",
+      "year": "",
+      "context": "Performance tuning for scientific computing",
+      "tools": "",
+      "summary": "An experimental Python tool for benchmarking and tuning execution settings for scientific programs. It preserves program code and inputs, checks outputs, and saves measured configurations for reuse.",
+      "contribution": "",
+      "details": "Manual profiling supports Linux and macOS; automatic tuning is experimental and Linux-only.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Kalacun/simtune"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "tools": "",
+      "details": "",
+      "contribution": "",
+      "id": "sensai",
+      "title": "SenseAI: A Personalized AI Boxing Trainer",
+      "year": "2026",
+      "context": "Boxing technique feedback on embedded hardware",
+      "summary": "A boxing assistant that classifies punches from wearable motion-sensor data using PyTorch, with a web interface for live predictions. I led the three-person team; the university project received 10/10.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Kalacun/sensAI"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "winter-is-coming",
+      "example": false,
+      "featured": true,
+      "title": "Winter-is-coming",
+      "year": "2025",
+      "context": "University of Maribor GameJam · first place",
+      "tools": "",
+      "summary": "A game created in three days for the University of Maribor GameJam, where our team placed first among 12 teams. Development is ongoing.",
+      "contribution": "",
+      "details": "",
+      "links": [
+        {
+          "label": "Public preview",
+          "url": "https://github.com/Kalacun/Winter-is-coming-preview"
+        }
+      ]
+    },
+    {
+      "id": "additional-project-5",
+      "example": false,
+      "featured": false,
+      "title": "theatergen",
+      "year": "2025–present",
+      "context": "Working prototype, in development",
+      "tools": "",
+      "summary": "A Godot game prototype that combines reinforcement learning, local language models, and image generation to create stories and dialogue that adapt to the player’s choices.",
+      "contribution": "",
+      "details": "",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "dinbus",
+      "example": false,
+      "featured": false,
+      "title": "DinBus",
+      "year": "",
+      "context": "Team project in development, using metaheuristic optimization",
+      "tools": "",
+      "summary": "A proposal for reservation-based intercity bus routing using differential evolution, with planned evaluation in a graph-based traffic simulation on HPC infrastructure.",
+      "contribution": "",
+      "details": "",
+      "links": [
+        {
+          "label": "Project proposal",
+          "url": "assets/documents/certificates/DinBus.pdf",
+          "aria_label": "DinBus: project proposal and work plan in Slovenian (PDF)"
+        },
+        {
+          "label": "English translation",
+          "url": "assets/documents/research/DinBus-en.pdf",
+          "aria_label": "DinBus: English reference translation of the project proposal (PDF)"
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "example": false,
+      "title": "BSc in Computer Science and Information Technologies",
+      "organization": "Faculty of Electrical Engineering and Computer Science, University of Maribor",
+      "dates": "2024–2027 (expected)",
+      "description": "Average grade: 9.95/10, the highest in my cohort.",
+      "links": [
+        {
+          "label": "Transcript of grades",
+          "url": "assets/documents/grades/grades.pdf",
+          "aria_label": "Academic transcript (PDF)"
+        }
+      ],
+      "courses": []
+    }
+  ],
+  "experience": [
+    {
+      "example": false,
+      "title": "Junior researcher",
+      "organization": "Intelligent Systems Laboratory, Institute of Informatics, University of Maribor",
+      "dates": "Oct 2026–present",
+      "description": "Independent research and industry-focused projects.",
+      "links": []
+    },
+    {
+      "example": false,
+      "title": "Student researcher and support engineer",
+      "organization": "Vega Supercomputing Department at the Institute of Information Science (IZUM), Maribor",
+      "dates": "Apr 2025–Apr 2026",
+      "description": "HPC research and practical projects on a supercomputing cluster.",
+      "links": []
+    }
+  ],
+  "awards": [
+    {
+      "example": false,
+      "title": "First place at the University of Maribor GameJam",
+      "organization": "University of Maribor",
+      "dates": "2026",
+      "description": "Team award for first place among 12 university teams.",
+      "links": [
+        {
+          "label": "Original PDF",
+          "url": "assets/documents/certificates/gamejam-first-place.pdf",
+          "aria_label": "GameJam first-place award: original certificate in Slovenian (PDF)"
+        },
+        {
+          "label": "English translation",
+          "url": "assets/documents/certificates/translations/gamejam-first-place-en.pdf",
+          "aria_label": "GameJam first-place award: English reference translation (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Arnes Research Hackathon finalist",
+      "organization": "Team Doner Keez · Syntherra",
+      "dates": "2025",
+      "description": "Joint 4th–5th place with Team Doner Keez. Around 35 teams from universities across Slovenia applied; 28 advanced to the first round, and eight reached the final.",
+      "links": [
+        {
+          "label": "Original PDF",
+          "url": "assets/documents/certificates/hackathon-2025.pdf",
+          "aria_label": "Research Hackathon 2025 participation: original certificate in Slovenian (PDF)"
+        },
+        {
+          "label": "English translation",
+          "url": "assets/documents/certificates/translations/hackathon-2025-en.pdf",
+          "aria_label": "Research Hackathon 2025 participation: English reference translation (PDF)"
+        },
+        {
+          "label": "Competition results",
+          "url": "https://hackathon.si/resitve-ekip-2025/"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Dean’s Award and top 5% distinction",
+      "organization": "University of Maribor",
+      "dates": "2025, 2026",
+      "description": "Received the Dean’s Award in 2025 for ranking among the top 5% of my first-year cohort. A separate certificate confirms a top 5% ranking in my second year (2025/26).",
+      "links": [
+        {
+          "label": "2026 certificate",
+          "url": "assets/documents/certificates/top_5%.pdf",
+          "aria_label": "Top 5% in the 2025/26 cohort: original certificate in Slovenian (PDF)"
+        },
+        {
+          "label": "English translation",
+          "url": "assets/documents/certificates/translations/top-5-percent-2026-en.pdf",
+          "aria_label": "Top 5% in the 2025/26 cohort: English reference translation (PDF)"
+        },
+        {
+          "label": "2025 award",
+          "url": "assets/documents/certificates/deans_award_2025.pdf",
+          "aria_label": "Dean’s Award 2025: original certificate in Slovenian (PDF)"
+        },
+        {
+          "label": "English translation",
+          "url": "assets/documents/certificates/translations/deans-award-2025-en.pdf",
+          "aria_label": "Dean’s Award 2025: English reference translation (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Zois Scholarship",
+      "organization": "Slovenia",
+      "dates": "Since 2020",
+      "description": "National scholarship for gifted students.",
+      "links": []
+    }
+  ],
+  "certificates": [
+    {
+      "example": false,
+      "title": "Gray Scott HPC Summer School",
+      "organization": "Gray Scott School · LAPP / CC-FR",
+      "dates": "23 Jun–4 Jul 2025",
+      "description": "33 hours of training in programming and optimization for heterogeneous computing architectures.",
+      "links": [
+        {
+          "label": "PDF (English)",
+          "url": "assets/documents/certificates/gray-scott-school-2025.pdf",
+          "aria_label": "Gray Scott HPC Summer School: certificate in English (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Introduction to Quantum Programming",
+      "organization": "University of Maribor · Faculty of Electrical Engineering and Computer Science",
+      "dates": "5 Feb 2025",
+      "description": "A short course worth 1 ECTS, completed with a grade of 10/10.",
+      "links": [
+        {
+          "label": "Original PDF",
+          "url": "assets/documents/certificates/quantum-programming.pdf",
+          "aria_label": "Introduction to Quantum Programming: original certificate in Slovenian (PDF)"
+        },
+        {
+          "label": "English translation",
+          "url": "assets/documents/certificates/translations/quantum-programming-en.pdf",
+          "aria_label": "Introduction to Quantum Programming: English reference translation (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Profiling AI Software Bootcamp",
+      "organization": "EuroCC · VSC Research Center, TU Wien, and NVIDIA",
+      "dates": "10 Jul 2025",
+      "description": "A 4.5-hour bootcamp on NVIDIA Nsight Systems, GPU profiling, and distributed training, equivalent to 0.25 ECTS.",
+      "links": [
+        {
+          "label": "PDF (English)",
+          "url": "assets/documents/certificates/ai-profiling-bootcamp.pdf",
+          "aria_label": "Profiling AI Software Bootcamp: certificate in English (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Multi-GPU Programming Bootcamp",
+      "organization": "EuroCC · ACC Cyfronet AGH and NVIDIA",
+      "dates": "17–18 Jun 2025",
+      "description": "Single-GPU and multi-GPU optimization, MPI, performance profiling, and hands-on exercises using NVIDIA A100 GPUs.",
+      "links": [
+        {
+          "label": "PDF (English)",
+          "url": "assets/documents/certificates/multi-gpu-bootcamp.pdf",
+          "aria_label": "Multi-GPU Programming Bootcamp: certificate in English (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Fundamentals of Accelerated Computing with Modern CUDA C++",
+      "organization": "EuroCC Slovenia · University of Maribor, NVIDIA workshop",
+      "dates": "19 Jun 2025",
+      "description": "An 8-hour workshop on GPU programming, CUDA kernels and streams, memory optimization, and profiling.",
+      "links": [
+        {
+          "label": "Original PDF",
+          "url": "assets/documents/certificates/cuda-cpp.pdf",
+          "aria_label": "Fundamentals of Accelerated Computing with Modern CUDA C++: original certificate in Slovenian (PDF)"
+        },
+        {
+          "label": "English translation",
+          "url": "assets/documents/certificates/translations/cuda-cpp-en.pdf",
+          "aria_label": "Fundamentals of Accelerated Computing with Modern CUDA C++: English reference translation (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Containers on Supercomputers",
+      "organization": "EuroCC Slovenia · University of Ljubljana",
+      "dates": "24 Jun 2025",
+      "description": "A 5-hour course covering Slurm, environment modules, Docker, and Apptainer.",
+      "links": [
+        {
+          "label": "Original PDF",
+          "url": "assets/documents/certificates/containers-hpc.pdf",
+          "aria_label": "Containers on Supercomputers: original certificate in Slovenian (PDF)"
+        },
+        {
+          "label": "English translation",
+          "url": "assets/documents/certificates/translations/containers-hpc-en.pdf",
+          "aria_label": "Containers on Supercomputers: English reference translation (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Advanced Big Data Processing in Python",
+      "organization": "EuroCC Slovenia · University of Maribor",
+      "dates": "2 Apr 2025",
+      "description": "A 4-hour workshop covering pandas, Polars, cuDF, data formats, and GPU-based data processing.",
+      "links": [
+        {
+          "label": "Original PDF",
+          "url": "assets/documents/certificates/big-data-python-advanced.pdf",
+          "aria_label": "Advanced Big Data Processing in Python: original certificate in Slovenian (PDF)"
+        },
+        {
+          "label": "English translation",
+          "url": "assets/documents/certificates/translations/big-data-python-advanced-en.pdf",
+          "aria_label": "Advanced Big Data Processing in Python: English reference translation (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Introduction to Big Data Processing in Python",
+      "organization": "EuroCC Slovenia · University of Maribor",
+      "dates": "31 Mar 2025",
+      "description": "A 4-hour workshop on data processing with pandas, efficient data loading and storage, visualization, and analysis.",
+      "links": [
+        {
+          "label": "Original PDF",
+          "url": "assets/documents/certificates/big-data-python-intro.pdf",
+          "aria_label": "Introduction to Big Data Processing in Python: original certificate in Slovenian (PDF)"
+        },
+        {
+          "label": "English translation",
+          "url": "assets/documents/certificates/translations/big-data-python-intro-en.pdf",
+          "aria_label": "Introduction to Big Data Processing in Python: English reference translation (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Fundamentals of Deep Learning",
+      "organization": "NVIDIA",
+      "dates": "23 Oct 2025",
+      "description": "Completed NVIDIA’s Fundamentals of Deep Learning course and earned a Certificate of Competency.",
+      "links": [
+        {
+          "label": "PDF (English)",
+          "url": "assets/documents/certificates/nvidia-deep-learning.pdf",
+          "aria_label": "Fundamentals of Deep Learning: certificate in English (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "Rapid Application Development with Large Language Models (LLMs)",
+      "organization": "",
+      "dates": "",
+      "description": "",
+      "links": []
+    },
+    {
+      "example": false,
+      "title": "CFD on HPC – OpenFOAM example",
+      "organization": "EuroCC Slovenia · University of Ljubljana",
+      "dates": "28-30 Sep 2026",
+      "description": "",
+      "links": []
+    }
+  ],
+  "languages": [
+    {
+      "example": false,
+      "title": "English",
+      "organization": "IELTS overall band score: 8.0",
+      "dates": "",
+      "description": "C1 proficiency. Completed the International Baccalaureate (IB) Diploma Programme in English.",
+      "links": [
+        {
+          "label": "Certificate",
+          "url": "assets/documents/certificates/ielts.pdf",
+          "aria_label": "English: IELTS test results (PDF)"
+        }
+      ]
+    },
+    {
+      "example": false,
+      "title": "German",
+      "organization": "University of Maribor",
+      "dates": "2024/25",
+      "description": "Completed a 30-hour German course at B1/B2 level and received a certificate.",
+      "links": [
+        {
+          "label": "Certificate",
+          "url": "assets/documents/certificates/german-b1-b2.pdf",
+          "aria_label": "German language course (B1/B2): certificate in Slovenian and English (PDF)"
+        }
+      ]
+    }
+  ],
+  "earlier_research": [
+    {
+      "example": false,
+      "title": "Factors affecting the rate of reaction of benzyl alcohol oxidation with potassium permanganate in nonpolar solvent using crown ethers",
+      "organization": "Aleksander Kalacun (mentor: Natalija Jančič) · 54th Krka Prizes",
+      "dates": "2024",
+      "description": "A laboratory study of crown ethers as phase-transfer catalysts in the oxidation of benzyl alcohol. We examined how crown ether concentration and temperature affect the reaction, as part of the 54th Krka Prizes research competition. The project involved more than 30 hours of practical laboratory work.",
+      "links": [
+        {
+          "label": "Book of abstracts",
+          "url": "https://www.krkinenagrade.si/media/store/54-KN/FINAL_544004-2024-KN-Krka-prizes-Book-of-abstracts-SI-EN2.pdf"
+        }
+      ],
+      "research_summary": "",
+      "abstract": "In this research, we investigated the practical use of crown ethers in the laboratory. Crown ethers are cyclic organic compounds that can bind ions of a suitable size within their central cavity. They form a nonpolar shell around a polar ion, allowing compounds normally soluble only in polar solvents to dissolve in nonpolar solvents. Reactions involving substances with different solubilities are a common challenge in laboratory research, while alternatives such as DMSO can pose environmental hazards. We therefore investigated the optimal crown ether concentration and reaction temperature.\n\nWe studied the oxidation of benzyl alcohol, which is soluble in nonpolar solvents, with potassium permanganate, which is soluble in polar solvents, using a crown ether as a catalyst and diethyl ether as the solvent. Without the crown ether, the reaction does not occur because the potassium permanganate remains solid and settles at the bottom. With the crown ether, oxidation proceeds and produces benzaldehyde.\n\nWe tested different crown ether concentrations at 30 °C, measuring the benzaldehyde concentration every five minutes for one hour with an ATR-FTIR spectrophotometer. We repeated the procedure at different temperatures while keeping the crown ether concentration constant. After comparing absolute concentration changes and areas under the concentration–time curves, we found that the highest benzaldehyde concentration occurred at 35 °C and with 0.4 g of crown ether per solution. Neither value was at the extreme of the tested range, which was an unexpected result."
+    },
+    {
+      "example": false,
+      "title": "Shor’s Algorithm — A Study",
+      "organization": "Aleksander Kalacun, Matjaž Meža, Jakob Žorž (mentor: Tim Milanez) · DMFA Mathematics Research Bootcamp",
+      "dates": "2024",
+      "description": "A study of Shor’s integer-factorization algorithm, from its number-theoretic foundations to its quantum components. We explain the reduction of factoring to order finding, introduce the necessary linear algebra and quantum-computing concepts, and describe quantum period finding using the Fourier transform.",
+      "links": [
+        {
+          "label": "Scholar",
+          "url": "https://scholar.google.si/citations?view_op=view_citation&hl=sl&user=TUe8zA0AAAAJ&citation_for_view=TUe8zA0AAAAJ:u-x6o8ySG0sC"
+        }
+      ],
+      "research_summary": "",
+      "abstract": "We explore a quantum algorithm for integer factorization known as Shor's algorithm, which, at least in theory, outperforms even the fastest known classical algorithm in terms of time complexity. In the first part, we explain the classical component of the algorithm, which is based on the fundamentals of number theory. In the second part, we tackle the quantum component, examining the foundations of quantum mechanics and quantum computing formulated around linear algebra."
+    },
+    {
+      "example": false,
+      "title": "Finite Automata",
+      "organization": "Matic Bratina, Aleksander Kalacun, Vasja Žorž (mentor: Nejc Zajc) · DMFA Mathematics Research Bootcamp",
+      "dates": "2023",
+      "description": "An introduction to formal languages and finite automata, showing how automata recognize regular languages. The paper covers the pumping lemma, conversion from nondeterministic to deterministic automata, and automaton constructions for operations on languages.",
+      "links": [
+        {
+          "label": "Proceedings",
+          "url": "http://mars.dmfa.si/stare_strani/src_old/projekti/marsZbornik2023.pdf#page=63"
+        }
+      ],
+      "research_summary": "",
+      "abstract": "This paper presents the concepts of formal languages and finite automata. It describes the operation of finite automata and their properties, explaining the connection between them and formal languages in an intuitive and accessible manner."
+    },
+    {
+      "example": false,
+      "title": "Future is Written in Qubits",
+      "organization": "Aleksander Kalacun (mentors: Mitja Osojnik and Marko Jagodič) · 56th Meeting of Young Researchers of Slovenia",
+      "dates": "2022",
+      "description": "A survey of quantum-computing foundations and applications in optimization, simulation, machine learning, and cryptography. The work includes Qiskit implementations, comparisons with classical methods, and selected experiments on IBM quantum hardware.",
+      "links": [
+        {
+          "label": "Publication",
+          "url": "https://zbirke.zotks.si/2022/resources/SS_ra%C4%8Dun_1311.pdf"
+        }
+      ],
+      "research_summary": "",
+      "abstract": "Using quantum computer simulations and experiments on real quantum computers, we investigated problems for which quantum computing promises advances in scientific research. We compared quantum and classical approaches in terms of speed and solution quality. The selected problems represented four areas in which quantum computing is expected to have a major impact.\n\nOur results generally agreed with published studies, but we also observed unexpected differences. In the matrix-based machine-learning example, the hybrid algorithm was almost as fast and efficient as a working, though nonoptimal, classical implementation. In our experiments with Shor’s algorithm, the quantum simulation was much slower, particularly as the problem became more difficult. We found that quantum simulations, although still far from efficient quantum computation, can help investigate problems with potentially significant effects on scientific disciplines relevant to everyday life."
+    },
+    {
+      "example": false,
+      "title": "How Many Fractions Are There? (Koliko je ulomkov?)",
+      "organization": "Aleksander Kalacun and Črt Cigale (mentor: Jožef Senekovič) · 54th Meeting of Young Researchers of Slovenia · Murska Sobota, Slovenia",
+      "dates": "2020",
+      "description": "A mathematics project on converting repeating decimals to fractions and classifying fractions by the length of their repeating decimal period. Submitted to the Young Researchers of Slovenia competition, where it received a Gold Award.",
+      "links": [
+        {
+          "label": "Publication",
+          "url": "https://zbirke.zotks.si/resources/Zlato_OS_Matematika_ali_logika_584812.pdf"
+        }
+      ],
+      "research_summary": "",
+      "abstract": "There are infinitely many natural numbers, and every rational number can be written as a fraction. A rational number also has a decimal representation that either terminates or eventually repeats. In this research paper, we investigate how to express a repeating decimal as a fraction and how this representation relates to the number of digits in the repeating block. We explore the number of fractions with a chosen period length, including the case of a single-digit repeating period."
+    }
+  ],
+  "misc": [],
+  "ultimate_frisbee": [
+    {
+      "example": false,
+      "title": "Coach and board member",
+      "organization": "Team Cosmo Maribor",
+      "dates": "Aug 2026–present",
+      "description": "One of three coaches and a member of a five-person board at a club with over 100 members.",
+      "links": []
+    },
+    {
+      "example": false,
+      "title": "Player",
+      "organization": "Team Cosmo Maribor",
+      "dates": "2022–present",
+      "description": "Indoor mixed national champion in 2026 (10 teams); fourth place in 2025; youth vice-champion in 2023 and 2024.",
+      "links": []
+    }
+  ]
+}
