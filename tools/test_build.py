@@ -47,6 +47,39 @@ class PublicationChecks(unittest.TestCase):
         data['projects'] = [project]
         return data
 
+    def test_misplaced_link_and_missing_fields_have_clear_locations(self):
+        self.data['research'].insert(1, {'label': 'Paper', 'url': 'assets/paper.pdf'})
+        with self.assertRaisesRegex(ValueError, r'research\[1\].*document link.*"links"'):
+            build.validate(self.data, False)
+        self.data['research'].pop(1)
+        del self.data['research'][0]['authors']
+        with self.assertRaisesRegex(ValueError, r'research\[0\].*"authors"'):
+            build.validate(self.data, False)
+
+    def test_check_only_reports_edit_errors_without_rewriting_files(self):
+        with tempfile.TemporaryDirectory() as folder:
+            site = Path(folder)
+            shutil.copytree(build.ROOT / 'tools', site / 'tools', ignore=shutil.ignore_patterns('__pycache__'))
+            data = self.public_content()
+            data['projects'] = []
+            data['profile'].update(cv='', photo='', cv_source='')
+            data['research'] = [{'label': 'Paper', 'url': 'assets/paper.pdf'}]
+            content = site / 'content.json'
+            content.write_text(json.dumps(data))
+            page = site / 'index.html'
+            page.write_text('Existing preview must remain unchanged.')
+            command = [sys.executable, str(site / 'tools/build.py'), '--check']
+            failed = subprocess.run(command, capture_output=True, text=True)
+            self.assertEqual(failed.returncode, 1)
+            self.assertIn('research[0] is a document link', failed.stderr)
+            self.assertNotIn('Traceback', failed.stderr)
+            data['research'] = []
+            content.write_text(json.dumps(data))
+            passed = subprocess.run(command, capture_output=True, text=True)
+            self.assertEqual(passed.returncode, 0, passed.stderr)
+            self.assertEqual(page.read_text(), 'Existing preview must remain unchanged.')
+            self.assertFalse((site / '_site').exists())
+
     def test_drafts_and_draft_cvs_cannot_be_published(self):
         with self.assertRaisesRegex(ValueError, 'still a draft'):
             build.validate(self.data, True)

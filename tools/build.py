@@ -227,11 +227,44 @@ def build(data):
     return '\n'.join(line.rstrip() for line in rendered.splitlines()) + '\n'
 
 
+def validate_entries(data):
+    """Report content-editing mistakes with their JSON location before rendering."""
+    for group in GROUPS:
+        items = data.get(group, [])
+        if not isinstance(items, list):
+            raise ValueError(f'{group} must be a list of entries.')
+        for index, item in enumerate(items):
+            location = f'{group}[{index}]'
+            if not isinstance(item, dict):
+                raise ValueError(f'{location} must be an entry object.')
+            if 'label' in item and 'url' in item and 'title' not in item:
+                raise ValueError(
+                    f'{location} is a document link, not a complete entry. '
+                    'Move this {label, url} object into the existing publication or project\'s "links" list.')
+            required = ('id', 'title', 'authors', 'year', 'status') if group == 'research' else (
+                ('id', 'title', 'year') if group == 'projects' else ('title',))
+            for key in required:
+                if key not in item:
+                    raise ValueError(f'{location} is missing required field "{key}". Copy a complete entry from the same section.')
+                if not isinstance(item[key], str):
+                    raise ValueError(f'{location}.{key} must be text.')
+            links = item.get('links', [])
+            if not isinstance(links, list):
+                raise ValueError(f'{location}.links must be a list of {{label, url}} objects.')
+            for link_index, link in enumerate(links):
+                link_location = f'{location}.links[{link_index}]'
+                if not isinstance(link, dict) or not isinstance(link.get('label'), str):
+                    raise ValueError(f'{link_location} must be an object with a text "label" and "url".')
+                if not isinstance(link.get('url', ''), str):
+                    raise ValueError(f'{link_location}.url must be text.')
+
+
 def validate(data, publish):
     if type(data.get('draft')) is not bool:
         raise ValueError('draft must be true or false.')
     if publish and data['draft']:
         raise ValueError('This is still a draft. Fill in content.json, remove examples, then set draft to false before publishing.')
+    validate_entries(data)
     profile = data['profile']
     domain = profile.get('domain', '')
     if domain and (len(domain) > 253 or not re.fullmatch(r'(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}', domain)):
@@ -295,10 +328,16 @@ class LinkCheck(HTMLParser):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--publish', action='store_true', help='Require real content and build only public files into _site/.')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--publish', action='store_true', help='Require real content and build only public files into _site/.')
+    mode.add_argument('--check', action='store_true', help='Validate content and document paths without writing files.')
     args = parser.parse_args()
     try:
         data = json.loads((ROOT / 'content.json').read_text())
+        if args.check:
+            validate(data, not data.get('draft', True))
+            print('Content and document links are valid. No files were changed.')
+            return
         source = data['profile'].get('cv_source', '')
         if source:
             source_path = (ROOT / source).resolve()

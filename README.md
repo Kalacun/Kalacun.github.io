@@ -31,6 +31,10 @@ Add documents under `assets/documents/` and link them in the relevant record:
 
 Use exact filenames, including capitalization. An empty URL is omitted from the live page. The build checks that each linked local file exists and deploys only referenced assets, the favicon, and the site's HTML, CSS, and JavaScript. Unlinked notes and input files are not served. Everything committed to this public source repository is still publicly downloadable, so add only files intended for publication.
 
+**Put document links inside an existing entry's `links` array.** For the chemistry paper, that is `earlier_research[0].links`. A `{ "label": ..., "url": ... }` object is only a link; do not add it directly to `research`, `earlier_research`, or `projects` as a new entry. Those lists contain complete records with titles and other fields. To add a second document to one paper, duplicate a link inside that paper's `links` array, keeping a comma between the links. To add a genuinely new paper, duplicate a complete paper record from the same section.
+
+Run `python3 tools/build.py --check` before building or pushing. This validates the content structure and local file paths without rewriting the page. An editing error now identifies its JSON location and explains the correction, rather than reporting a missing Python key. GitHub runs this validation before its tests too.
+
 Certificate originals remain unchanged. Translation text is in `tools/certificate-translations.json` and `tools/additional-document-translations.json`. Optional translation scripts require ReportLab and Arial; ordinary website builds use only Python's standard library. The English PDFs are reference translations, not certified translations. Original hashes are recorded in `tools/certificate-sources.json`.
 
 ## Preview locally
@@ -47,7 +51,7 @@ Open **http://127.0.0.1:8000/**. Stop the server with Ctrl+C. Alternatively, run
 Check changes before committing:
 
 ```bash
-python3 -m unittest discover -s tools -p 'test_*.py' -v
+make check
 python3 tools/build.py --publish
 ```
 

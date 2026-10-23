@@ -56,10 +56,6 @@
       "research_summary": ""
     },
     {
-      "label": "Chem_paper",
-      "url": "assets/documents/papers/Naloga_ Kalacunpdf.pdf"
-    },
-    {
       "id": "tropical-rl",
       "example": false,
       "title": "Parameter-Dependent Intervention Pruning in Causal Reinforcement Learning via Tropical Geometry",
@@ -542,6 +538,11 @@
       "dates": "2024",
       "description": "A laboratory study of crown ethers as phase-transfer catalysts in the oxidation of benzyl alcohol. We examined how crown ether concentration and temperature affect the reaction, as part of the 54th Krka Prizes research competition. The project involved more than 30 hours of practical laboratory work.",
       "links": [
+        {
+          "label": "Paper (English)",
+          "url": "assets/documents/papers/Naloga_ Kalacunpdf.pdf",
+          "aria_label": "Chemistry research paper in English (PDF)"
+        },
         {
           "label": "Book of abstracts",
           "url": "https://www.krkinenagrade.si/media/store/54-KN/FINAL_544004-2024-KN-Krka-prizes-Book-of-abstracts-SI-EN2.pdf"
