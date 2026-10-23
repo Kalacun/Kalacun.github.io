@@ -56,6 +56,10 @@
       "research_summary": ""
     },
     {
+      "label": "Chem_paper",
+      "url": "assets/documents/papers/Naloga_ Kalacunpdf.pdf"
+    },
+    {
       "id": "tropical-rl",
       "example": false,
       "title": "Parameter-Dependent Intervention Pruning in Causal Reinforcement Learning via Tropical Geometry",
