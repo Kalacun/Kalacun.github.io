@@ -128,7 +128,7 @@
       "tools": "",
       "summary": "An experimental Python tool for benchmarking and tuning execution settings for scientific programs. It preserves program code and inputs, checks outputs, and saves measured configurations for reuse.",
       "contribution": "",
-      "details": "Manual profiling supports Linux and macOS; automatic tuning is experimental and Linux-only.",
+      "details": "",
       "links": [
         {
           "label": "GitHub",
