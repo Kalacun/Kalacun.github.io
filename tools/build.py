@@ -217,7 +217,6 @@ def build(data):
         description=esc('Research, publications, projects, and academic background of ' + profile['name'] + '.'),
         robots='<meta name="robots" content="noindex, nofollow">' if draft else '',
         canonical=f'<link rel="canonical" href="https://{esc(profile["domain"])}/">' if profile.get('domain') else '',
-        sidebar_caption=esc(profile.get('institution', '').split(' · ')[0]),
         portrait=portrait(profile, draft), nav=nav, resources=resources,
         bio=''.join(f'<p class="bio">{esc(item)}</p>' for item in profile['bio']),
         interests=interest_html, glance=glance_html,
